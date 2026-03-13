@@ -1,0 +1,70 @@
+<HTML>
+    <header>
+        <h1>Welcome to Laundry Wallah/Laundry Mart</h1>
+    </header>
+    <body>
+        <p>We are a laundry service provider that offers convenient and affordable laundry solutions for our customers. Our services include washing, drying, folding, and ironing of clothes. We also offer pickup and delivery services for added convenience.</p>
+        <p>Our team of experienced professionals is dedicated to providing high-quality laundry services to our customers. We use state-of-the-art equipment and eco-friendly detergents to ensure that your clothes are cleaned effectively while being gentle on the environment.</p>
+        <p>Whether you need a quick wash or a full-service laundry solution, Laundry Wallah/Laundry Mart has got you covered. Contact us today to learn more about our services and how we can help you with your laundry needs.</p>
+        <img src="https://th.bing.com/th/id/OIP.4ZwFtO9du6enW5uTs5s3igHaHa?w=186&h=186&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Laundry Service">
+        <br>
+        <h1>Our Services</h1>
+        <ul>
+            <li>Washing</li>
+            <li>Drying</li>
+            <li>Folding</li>
+            <li>Ironing</li>
+            <li>Pickup and Delivery</li>
+        </ul>
+        <h1>Our Price List</h1>
+        <table border="1">
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Washing</td>
+                <td>$5 per load</td>
+            </tr>
+            <tr>
+                <td>Drying</td>
+                <td>$3 per load</td>
+            </tr>
+            <tr>
+                <td>Folding</td>
+                <td>$2 per load</td>
+            </tr>
+            <tr>
+                <td>Ironing</td>
+                <td>$4 per load</td>
+            </tr>
+            <tr>
+                <td>Pickup and Delivery</td>
+                <td>$10 per trip</td>
+            </tr>
+        </table>
+        <h1>Book Now</h1>
+        <form action="submit_booking.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="service">Select Service:</label><br>
+            <select id="service" name="service" required>
+                <option value="">--Please choose an option--</option>
+                <option value="washing">Washing</option>
+                <option value="drying">Drying</option>
+                <option value="folding">Folding</option>
+                <option value="ironing">Ironing</option>
+                <option value="pickup_delivery">Pickup and Delivery</option>
+            </select><br><br>
+            <input type="submit" value="Book Now">
+
+        <footer>
+            <h1>Contact Us</h1>
+            <p>Email: info@laundrymart.com.</p>
+            <p>Phone: (123) 456-7890</p>
+        </footer>
+    </body>
+
+</HTML>
