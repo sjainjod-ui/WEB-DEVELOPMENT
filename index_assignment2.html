@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laundry Service</title>
+  <style>
+    /* Base reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #1e1e2f;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #eaf2ff 0%, #fdfbff 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 10;
+    }
+
+    .navbar__brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .navbar__brand img {
+      height: 40px;
+      width: 40px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .navbar__links {
+      display: flex;
+      gap: 1.8rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .navbar__links a {
+      padding: 0.35rem 0.25rem;
+      transition: color 150ms ease, transform 150ms ease;
+    }
+
+    .navbar__links a:hover {
+      color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .navbar__user {
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(29, 78, 216, 0.12);
+      color: #1d4ed8;
+      font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 2.5rem;
+      gap: 2.5rem;
+      padding-top: 7.5rem; /* account for fixed navbar */
+    }
+
+    .hero__content {
+      max-width: 520px;
+    }
+
+    .hero__title {
+      font-size: clamp(2.5rem, 4vw, 3.6rem);
+      margin: 0 0 1rem;
+      line-height: 1.08;
+    }
+
+    .hero__subtitle {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0 0 2rem;
+      color: rgba(30, 30, 47, 0.8);
+    }
+
+    .hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #2563eb 0%, #06b6d4 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 20px 40px rgba(13, 78, 194, 0.2);
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+
+    .hero__cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 26px 42px rgba(13, 78, 194, 0.25);
+    }
+
+    .hero__cta:active {
+      transform: translateY(0);
+      box-shadow: 0 18px 34px rgba(13, 78, 194, 0.22);
+    }
+
+    .hero__image {
+      width: 100%;
+      height: 60vh;
+      max-height: 540px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(16, 24, 40, 0.12);
+      background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+    }
+
+    .hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 7.5rem;
+      }
+
+      .hero__image {
+        height: 48vh;
+        max-height: none;
+      }
+
+      .navbar {
+        padding: 0 1.5rem;
+      }
+
+      .navbar__links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a class="navbar__brand" href="#">
+      <img src="logo.jpg" alt="Laundry logo" />
+      <span>FreshFold</span>
+    </a>
+
+    <nav class="navbar__links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="navbar__user">Surima Jain</div>
+  </header>
+
+  <main class="hero" id="home">
+    <section class="hero__content">
+      <h1 class="hero__title">Laundry picked up. Freshly folded. Delivered.</h1>
+      <p class="hero__subtitle">
+        Enjoy effortless laundry care with our home pickup & delivery service. Fast turnaround, eco-friendly
+        cleaning, and a smile in every fold.
+      </p>
+      <button class="hero__cta" type="button">Book a Service Today</button>
+    </section>
+
+    <section class="hero__image" aria-label="Laundry service preview">
+      <img
+        src="logo.jpg"
+        alt="Person folding clean laundry" />
+    </section>
+  </main>
+</body>
+</html>
